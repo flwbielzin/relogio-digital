@@ -1,6 +1,6 @@
 let hrs = document.getElementById("hrs");
 let min = document.getElementById("min");
-let sec = document.getElementById("sec");
+let sec = document.getElementById("seg"); // Corrigido para 'seg'
 
 setInterval(() => {
   let currentTime = new Date();
@@ -11,3 +11,5 @@ setInterval(() => {
   sec.innerHTML =
     (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
 }, 1000);
+
+

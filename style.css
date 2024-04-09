@@ -3,7 +3,24 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    
   }
+  header {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    background-color: #2f363e;
+    position: center;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    background-color: #2f363e;
+  }
+  
   .hero {
     width: 100%;
     min-height: 100vh;
@@ -20,6 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   .clock {
     border-radius: 10px;
@@ -27,8 +45,9 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(40px);
-    color: #6e7f92f6;
+    color: #0e0e0ef6;
     z-index: 10;
+    filter: drop-shadow(0 0 10px #fff);
   }
   .clock span {
     font-size: 80px;
@@ -49,18 +68,30 @@
     color: #0f0;
     font-weight: 600;
     margin-bottom: -10px;
+    filter: drop-shadow(0 0 10px #0f0);
   }
+  #min {
+    font-size: 80px; /* Tamanho da fonte */
+    width: 110px; /* Largura do elemento */
+    display: inline-block; /* Exibir como bloco */
+    text-align: center; /* Alinhar texto ao centro */
+    position: relative; /* Posição relativa */
+  }
+  
   #min::after {
-    content: "MIN";
-    color: #0ff;
-    font-weight: 600;
-    margin-bottom: -10px;
+    content: "Minutos"; /* Texto após os minutos */
+    color: #0ff; /* Cor do texto */
+    font-weight: 600; /* Peso da fonte */
+    margin-bottom: -10px; /* Margem inferior negativa para ajuste */
+    filter: drop-shadow(0 0 10px #0ff);
   }
+  
   #seg::after {
-    content: "SEG";
+    content: "Segundos";
     color: #ff0;
     font-weight: 600;
     margin-bottom: -10px;
+    filter: drop-shadow(0 0 10px #ff0);
   }
   
   /*------Anemated Border---------*/
@@ -107,6 +138,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   @property --a {
     syntax: "<angle>";
@@ -121,3 +153,93 @@
       --a: -360deg;
     }
   }
+
+  /* octaga menu */
+
+  .menu {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu li {
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform: rotate(0deg) translateX(100px);
+    transform-origin: 130px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+  }
+  .menu.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+  }
+  .menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    transition: 1s;
+    color: transparent;
+    transition-delay: 0.5s;
+    filter: drop-shadow(0 0 2px var(--clr));
+  }
+  .menu.active a {
+    color: var(--clr);
+  }
+  .menu a::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--clr);
+    transform: rotate(calc(90deg * var(--i))) translate(0, 25px);
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+    transition-delay: 0.5s, 1s, 1.5s;
+  }
+  .menu.active a::before {
+    width: 50px;
+    height: 50px;
+    background: #161616;
+    border: 2px solid var(--clr);
+    transform: rotate(calc(0 * var(--i)));
+    transition: transform 0.5s, height 0.5s, width 0.5s;
+    transition-delay: 0.5s, 1.5s, 1.5s;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 5px var(--clr));
+    rotate: 135deg;
+  }
+  .menu.active li:hover a::before {
+    background: var(--clr);
+  }
+  .menu.active li:hover a ion-icon {
+    color: #161616;
+  }
+  
+  .menuToggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 32px;
+    transition: 1.5s;
+  }
+  .menu.active .menuToggle {
+    transform: rotate(315deg);
+  }
+
+  
