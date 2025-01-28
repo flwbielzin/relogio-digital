@@ -19,55 +19,47 @@
     <link rel="icon" type="image/png" href="img/logo flwbielzin.jpeg">
     <script src="script.js" defer></script>
 </head>
-<header>
-    <div class="box">
-        <style></style>
-        <div class="clock">
-            <span id="hrs"></span>
-            <span>:</span>
-            <span id="min">00</span>
-            <span>:</span>
-            <span id="seg">00</span>
-
+<body>
+    <div class="container">
+        <h1 class="title">Relógio Digital</h1>
+        <div class="box">
+            <div class="clock">
+                <span id="hrs"></span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="seg">00</span>
+            </div>
         </div>
 
+        <ul class="menu">
+            <div class="menuToggle"><ion-icon name="add-outline"></ion-icon></div>
+            <li style="--i: 0; --clr: #ff2972">
+                <a href="#"><ion-icon name="home-outline"></ion-icon></a>
+            </li>
+            <li style="--i: 1; --clr: #fee800">
+                <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
+            </li>
+            <li style="--i: 2; --clr: #04fc43">
+                <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
+            </li>
+            <li style="--i: 3; --clr: #fe00f1">
+                <a href="#"><ion-icon name="key-outline"></ion-icon></a>
+            </li>
+            <li style="--i: 4; --clr: #00b0fe">
+                <a href="#"><ion-icon name="camera-outline"></ion-icon></a>
+            </li>
+            <li style="--i: 5; --clr: #fea600">
+                <a href="#"><ion-icon name="game-controller-outline"></ion-icon></a>
+            </li>
+            <li style="--i: 6; --clr: #a529ff">
+                <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </li>
+            <li style="--i: 7; --clr: #01bdab">
+                <a href="#"><ion-icon name="videocam-outline"></ion-icon></a>
+            </li>
+        </ul>
     </div>
-
-    </div>
-
-</header>
-
-<body>
-
-    <ul class="menu">
-        <div class="menuToggle"><ion-icon name="add-outline"></ion-icon></div>
-        <li style="--i: 0; --clr: #ff2972">
-            <a href="#"><ion-icon name="home-outline"></ion-icon></a>
-        </li>
-        <li style="--i: 1; --clr: #fee800">
-            <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
-        </li>
-        <li style="--i: 2; --clr: #04fc43">
-            <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
-        </li>
-        <li style="--i: 3; --clr: #fe00f1">
-            <a href="#"><ion-icon name="key-outline"></ion-icon></a>
-        </li>
-        <li style="--i: 4; --clr: #00b0fe">
-            <a href="#"><ion-icon name="camera-outline"></ion-icon></a>
-        </li>
-        <li style="--i: 5; --clr: #fea600">
-            <a href="#"><ion-icon name="game-controller-outline"></ion-icon></a>
-        </li>
-        <li style="--i: 6; --clr: #a529ff">
-            <a href="#"><ion-icon name="person-outline"></ion-icon></a>
-        </li>
-        <li style="--i: 7; --clr: #01bdab">
-            <a href="#"><ion-icon name="videocam-outline"></ion-icon></a>
-        </li>
-    </ul>
-
-
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -80,6 +72,14 @@
         };
     </script>
     <script src="js/script.js" defer></script>
+
+    <footer class="footer">
+        <p>Desenvolvido por Gabriel Oliveira</p>
+        <div class="social-links">
+            <a href="https://github.com/flwbielzin" class="social-link"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/flwbielzin/" class="social-link"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </footer>
 </body>
 
 </html>
